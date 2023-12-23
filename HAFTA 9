@@ -1,0 +1,41 @@
+HAFTA 9
+
+DENETLEYİCİ:
+#include <iostream>
+using namespace std;
+class Kare {
+private: 
+float kenar;
+public:
+ void deger_atama(float);
+ float cevre() {
+ return 4 * kenar;
+ }
+};
+void Kare::deger_atama (float k) {
+ kenar = k;
+}
+int main () {
+ Kare kare;
+ kare.deger_atama (4.3);
+ cout<<"Kare Cevresi: "<<kare.cevre()<<"\n";
+ return 0;
+}
+
+#include <iostream>
+using namespace std;
+class Daire {
+public:
+ float yari_cap;
+ float alan_bul(float yari_cap) {
+ return 3.14 * yari_cap * yari_cap;
+ }
+};
+int main () {
+ Daire daire;
+ cout << "Dairenin yaricapini giriniz: " << endl;
+ cin >> daire.yari_cap;
+ cout<<"Daire Alani: "<<daire.alan_bul(daire.yari_cap)<<"\n";
+ return 0;
+}
+
