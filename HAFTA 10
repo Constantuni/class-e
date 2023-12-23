@@ -38,8 +38,7 @@ olmalıdır:
 ● Noktalar bulundukları koordinatları ekranda gösterebilmeli: goster fonksiyonu
 ● Noktalar, sıfır (0,0) koordinatında olup olmadıkları sorusunu yanıtlayabilmeli: 
 sifir_mi fonksiyonu
-180
-Bölüm 11: Hafta 10. Nesne Yönelimli Programlama
+
 #include <iostream>
 using namespace std;
 class Nokta{
