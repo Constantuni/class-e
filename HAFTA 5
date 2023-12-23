@@ -1,0 +1,53 @@
+HAFTA 5
+
+Analizci:
+#include <iostream>
+using namespace std;
+int main()
+{
+ int sayi = 13;
+ if(sayi % 2 == 0)
+ cout << sayi /2;
+ else
+ cout << (sayi-1) /2;
+}
+Yukarıdaki kodu bilgisayarına yazan bir programcı sizce ne programlamak istemiştir?
+Cevap: Verilen sayının yarısını bulmaya çalışmaktadır. Sayı tek olsa dahi orta noktası 
+bulunmaktadır
+
+-------------------
+
+Denetleyici: 
+#include <iostream>
+using namespace std;
+int main()
+{
+ int sayi = 13;
+ if(sayi % 2 == 0)
+ cout << sayi /2;
+ else
+ cout << (sayi-1) /2;
+}
+Yukarıdaki kodu bilgisayarına yazan bir programcı nasıl bir ekran çıktısı ile 
+karşılaşacaktır. Çıktıyı tahmin ettikten sonra, lütfen kodları bilgisayarınıza yazarak 
+tahmininizi test ediniz.
+Cevap: 6 
+
+-------------------
+
+Kodlayıcı: Ali adlı bir öğrenci istediği programı yazmaya başlamadan önce yandaki 
+akış şemasını oluşturmuştur. Fakat akış şemasını koda dönüştürme konusunda 
+yardıma ihtiyacı vardır. Bunun için Ali'ye yardım ediniz.
+Cevap: 
+#include <iostream>
+using namespace std;
+int main()
+{
+ int sayi;
+ cin >> sayi;
+ if(sayi>10)
+ sayi = sayi -10;
+ else
+ sayi = sayi +10;
+ cout << sayi;
+}
