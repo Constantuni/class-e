@@ -1,0 +1,57 @@
+HAFTA 11
+
+1. KODLAYICI Kişinin soyadını büyük harfe çevirelim.
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main(){
+ char mesaj[] = "Ahmet Yilmaz";
+ bool bosluk = false;
+ for(int i=0; i<strlen(mesaj);i++) {
+ if(bosluk)
+ mesaj[i] = toupper(mesaj[i]);
+ if(mesaj[i] == ' ')
+ bosluk = true;
+ }
+ cout << mesaj ;
+ return 0;
+}
+
+2. KODLAYICI Klavyeden girilen cümledeki ‘a’ veya ‘A’ karakterlerini sayan 
+programı yazınız.
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+char mesaj[100];
+cin.getline(mesaj,100);
+int sayac = 0;
+ for(int i=0;i<strlen(mesaj);i++)
+ {
+ if(mesaj[i]=='a' || mesaj[i]=='A')
+ sayac++;
+ }
+ cout << "Bu cumlede "<< sayac <<" adet a vardir.";
+ return 0;
+}
+
+3. KODLAYICI 1-100 arası sayıların toplamını dosyaya yazınız.
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+ int toplam = 0;
+ for(int i=1;i<100;i++)
+ toplam += i;
+ ofstream dosya("sonuc.txt");
+ if(dosya.is_open())
+ {
+ dosya << toplam;
+ }
+ else
+ {
+ cout << "Dosya Okunamadi!";
+ }
+}
