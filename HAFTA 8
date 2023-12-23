@@ -1,0 +1,47 @@
+HAFTA 8
+
+1. KODLAYICI: Parametre olarak gönderilen iki sayının toplamını geriye 
+döndüren bir fonksiyonu oluşturmak isteseydiniz nasıl bir kod yazardınız?
+
+#include <iostream>
+using namespace std;
+int topla(int sayi1, int sayi2)
+{
+ int toplam = sayi1 + sayi2;
+ return toplam;
+}
+int main()
+{
+ int sonuc = topla(5,4);
+ cout<< sonuc;
+}
+
+2. KODLAYICI:
+#include <iostream>
+using namespace std;
+void tekrar_yaz(char a, int adet)
+{
+ for(int i=0;i<adet;i++)
+ cout << a;
+}
+int main()
+{
+ tekrar_yaz('z',5);
+}
+
+3. KODLAYICI:
+#include <iostream>
+using namespace std;
+int dizi_topla(int dizi[5])
+{
+ int toplam = 0;
+ for(int i=0;i<5;i++)
+ toplam = toplam + dizi[i];
+ return toplam;
+}
+int main()
+{
+ int sayilar[5] = {5,6,9,3,2};
+ int sonuc = dizi_topla(sayilar);
+ cout << sonuc;
+}
