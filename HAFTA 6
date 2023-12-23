@@ -1,0 +1,29 @@
+HAFTA 6
+
+1) Analizci: Aşağıdaki kod ekrana kaç kez merhaba yazar. (Cevap 0)
+
+2) Kodlayıcı: Ahmet bilgisayara rastgele 2 sayı ürettirip, üretilen sayıdaki büyük 
+olanı ekrana yazdırmak istiyor. Ahmet'in nasıl bir kod yazması gerekmektedir?
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+ int sayi1, sayi2;
+ srand(time(0));
+ sayi1 = rand();
+ sayi2 = rand();
+ if(sayi1>sayi2)
+ cout << sayi1;
+ else
+ cout << sayi2;
+}
+
+3) Kodlayıcı: Bir sınıftaki öğrencilerin numarası 5 ile 25 arasında değişmektedir. 
+Sınıfa giren matematik öğretmeni Sercan, 3 ile tam bölünebilen öğrenci 
+numaralarını bulduran bir program yazmak istediğini belirtmiştir. Siz matematik 
+öğretmeninize kodları nasıl yazarak yardımcı olurdunuz?
+for(int i=5;i<25;i++)
+ if (i%3 == 0)
+ cout << i <<endl;
