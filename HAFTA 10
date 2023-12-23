@@ -1,0 +1,78 @@
+HAFTA 10
+
+Tasarlayıcı: Bir futbol takımının teknik direktörü, futbolcuların ad-soyad, forma 
+numarası ve attığı gollerin sayısını tutmak için bir program hazırlamak ister. Teknik 
+direktör bunun için örnek bir program yazar. Programda örnek olarak Futbolcu sınıf 
+yapısı ve bu sınıfa ait 2 futbolcunun bilgileri nesne olarak tutulmaktadır. Bu programın 
+kodlarını tasarlayınız.
+
+#include <iostream>
+#include <string>
+using namespace std;
+class Futbolcu{
+public:
+string ad_soyad;
+int forma_no;
+int gol_sayisi;
+Futbolcu(string x_ad_soyad, int x_forma_no, int x_gol_sayisi){
+ ad_soyad = x_ad_soyad;
+ forma_no = x_forma_no;
+ gol_sayisi = x_gol_sayisi;
+}
+}; 
+int main()
+{
+Futbolcu f1("Arda Alp", 21 , 13);
+Futbolcu f2("Burakcem", 23, 17);
+cout << f1.ad_soyad << " " << f1.forma_no << " " << f1.gol_sayisi << "\n";
+cout << f2.ad_soyad << " " << f2.forma_no << " " << f2.gol_sayisi << "\n";
+return 0;
+}
+
+Kodlayıcı: Grafik programlarında kullanmak üzere nokta nesnelerini tanımlamak için 
+bir Nokta sınıfı oluşturalım. Noktalar iki boyutlu düzlemde yer alacağından özellik 
+olarak x ve y koordinatları olmak üzere iki adet koordinat bilgisine sahiptir. 
+Programınızda noktaların sahip olması gereken yetenekler (davranışlar) ise şunlar 
+olmalıdır:
+● Noktalar, düzlemde herhangi bir yere konumlanabilmeli: git fonksiyonu
+● Noktalar bulundukları koordinatları ekranda gösterebilmeli: goster fonksiyonu
+● Noktalar, sıfır (0,0) koordinatında olup olmadıkları sorusunu yanıtlayabilmeli: 
+sifir_mi fonksiyonu
+180
+Bölüm 11: Hafta 10. Nesne Yönelimli Programlama
+#include <iostream>
+using namespace std;
+class Nokta{
+ int x,y;
+ public:
+ void git(int, int);
+ void goster();
+ void sifir_mi();
+};
+void Nokta::git(int yeni_x, int yeni_y)
+{
+ x = yeni_x;
+ y = yeni_y;
+}
+void Nokta::goster()
+{
+ cout << "X noktasi: " << x << ", Y noktasi: " << y << endl;
+}
+void Nokta::sifir_mi()
+{
+ if ((x == 0) && (y == 0))
+ cout << "n1 su anda sifir noktasindadir." << endl;
+ else
+ cout << "n1 su anda sifir noktasinda degildir." << endl;
+}
+int main() {
+ Nokta n1,n2;
+ n1.git(78,34);
+ n1.goster();
+ n1.git(61,35);
+ n1.goster();
+ n1.sifir_mi();
+ n2.git(0,0);
+ n2.sifir_mi();
+ return 0;
+}
